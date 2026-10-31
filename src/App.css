@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700;800;900&display=swap');
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+.title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(6rem, 14vw, 14rem);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #e21b24;
+    display: block;
+    white-space: nowrap;
+    letter-spacing: 8px;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95), 0 0 50px rgba(226, 27, 36, 0.45);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: clamp(1.1rem, 2.4vw, 1.8rem);
+    margin: 10px 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle.sub-top {
+    align-self: flex-start;
+    margin-left: 10vw;
+    text-align: left;
+}
+
+.subtitle.sub-bottom {
+    align-self: flex-end;
+    margin-right: 10vw;
+    text-align: right;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.home {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #000;
+}
+
+/* Subtle cinematic film grain & vignette to mask compression artifacts */
+.home::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.4) 100%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
+    mix-blend-mode: overlay;
+}
+
+.home-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(40px) brightness(0.8);
+    transform: scale(1.45);
+    z-index: -2;
+}
+
+.home-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.22) translateZ(0);
+    z-index: -1;
+    filter: contrast(1.1) saturate(1.12) brightness(1.03);
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+.section1 {
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.name-title {
+    font-size: clamp(60px, 18vw, 220px);
+    font-weight: 900;
+    letter-spacing: 16px;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.letter {
+    display: inline-block;
+    height: 100px;
+}
+
+.section2 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cc0421;
+    position: relative;
+    overflow: hidden;
+}
+
+.spidey-upside-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    object-position: center top;
+    z-index: 10 !important;
+    pointer-events: none;
+    will-change: transform;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+}
+
+.section2 h2 {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    will-change: transform;
+}
+
+
+.word {
+    display: inline-block;
+    color: #011d45;
+    white-space: pre;
+    font-weight: 200;
+    font-size: 70px;
+}
+
+.section3 {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #cc0421;
+}
+
+.section3-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section3-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+    margin: 0;
+    pointer-events: none;
+}
+
+.section-3-h2 {
+    display: inline-block;
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95), 0 0 25px rgba(226, 27, 36, 0.8);
+    white-space: pre;
+    will-change: transform, opacity;
+}
+
+.section4 {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #cc0421;
+}
+
+.horizontal-track {
+    height: 90%;
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    border-radius: 30px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.panel {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 900;
+    flex-shrink: 0;
+    border-radius: 50px;
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.panel-img {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.panel1 {
+    background: #1e293b;
+    color: #60a5fa;
+}
+
+.panel2 {
+    background: #0f172a;
+    color: #f43f5e;
+}
+
+.panel3 {
+    background: #111827;
+    color: #34d399;
+}
+
+.panel4 {
+    background: #18181b;
+    color: #fbbf24;
+}
+
+.earth-rendering {
+    width: 100%;
+    height: 100vh;
+    background-color: #cc0421;
+    position: relative;
+    overflow: hidden;
+}
+
+.earth-canvas-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -250px;
+    z-index: 5;
+}
+
+.earth-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    z-index: 10;
+    width: 30vw;
+    opacity: 0;
+}
+
+.earth-rendering h2 {
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+}
+
+.earth-rendering p {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+
+.dragdrop {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.dragdrop-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #cc0421;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+.dragdrop-container h2 {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    z-index: 1;
+}
+
+.dd-container {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -150px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: grab;
+    touch-action: none;
+    will-change: transform;
+    background-color: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.ddImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
